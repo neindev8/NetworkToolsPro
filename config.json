@@ -1,0 +1,15 @@
+{
+  "keepalive_interval": 30,
+  "keepalive_protocol": "https",
+  "keepalive_strategy": "failover",
+  "sites_list": [
+    "https://www.google.com",
+    "https://www.cloudflare.com",
+    "https://1.1.1.1"
+  ],
+  "custom_sites": [],
+  "ping_count": 4,
+  "traceroute_max_hops": 30,
+  "auto_start_keepalive": false,
+  "last_keepalive_running": false
+}

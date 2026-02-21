@@ -1,0 +1,85 @@
+INICIO RÁPIDO
+=============
+
+¡NOVEDAD! Ping y Traceroute SIN PERMISOS DE ADMIN
+--------------------------------------------------
+Esta versión incluye módulos personalizados que NO requieren
+permisos de administrador. ¡Funciona directamente!
+
+INSTALACIÓN (Windows/Linux)
+----------------------------
+1. pip install -r requirements.txt
+2. python network_tools.py
+3. ¡Listo! Todo funciona sin permisos especiales
+
+WINDOWS - Método Fácil
+-----------------------
+Doble clic: INSTALAR_Y_EJECUTAR.bat
+
+COMPILAR A EXE
+--------------
+Doble clic: COMPILAR_A_EXE.bat
+EXE en: dist\NetworkToolsPro.exe
+
+CONFIGURACIÓN KEEPALIVE EN 1 MINUTO
+====================================
+
+Para mantener tu conexión activa automáticamente:
+
+1. Abre la app (sin admin, funciona normal)
+2. Pestaña "Keepalive"
+3. Click "Cargar archivo" > sites.txt
+4. Configura:
+   - Intervalo: 30
+   - Protocolo: https  
+   - Estrategia: failover
+5. Click "Iniciar"
+6. Pestaña "Configuración"
+7. ☑️ "Auto-iniciar keepalive"
+8. "Guardar Configuración"
+9. Cierra con [X] (va a tray)
+
+¡LISTO! La próxima vez que abras la app:
+- Keepalive se inicia automáticamente
+- Funciona en segundo plano
+- Mantiene tu conexión activa
+
+MÓDULOS PERSONALIZADOS
+=======================
+
+La app incluye:
+- ping_module.py - Ping sin admin
+  * Usa TCP cuando ICMP no disponible
+  * Funciona en cualquier Windows/Linux
+  
+- traceroute_module.py - Traceroute sin admin
+  * Método TCP/UDP híbrido
+  * No requiere permisos especiales
+
+Si los módulos no cargan, la app usa los comandos
+del sistema automáticamente (pueden requerir admin).
+
+SYSTEM TRAY
+===========
+- Icono siempre visible en bandeja
+- Al cerrar con [X]: va a tray
+- Clic derecho: Mostrar/Ocultar/Salir
+- La app sigue funcionando en segundo plano
+
+VENTAJAS
+========
+✓ Sin permisos de administrador
+✓ Funciona en Windows y Linux
+✓ Ping y Traceroute propios
+✓ System tray integrado
+✓ Auto-restauración
+✓ Fácil de compilar a EXE
+
+ARCHIVOS
+========
+network_tools.py - App principal
+ping_module.py - Ping personalizado
+traceroute_module.py - Traceroute personalizado
+sites.txt - Sitios de ejemplo
+config.json - Tu config (auto)
+logs/ - Tus logs (auto)
